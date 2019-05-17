@@ -1,6 +1,6 @@
-# Project Name
+# Project NavBar
 
-> Project description
+> Remake of Nike's Navbar. Includes
 
 ## Related Projects
 
@@ -17,23 +17,20 @@
 
 ## Usage
 
-> Some usage instructions
+> In projects main directory run the following in terminal
+>> npm install
+>> npm run pack
+>> npm run server
 
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
-- Node 6.13.0
-- etc
+- Node --newest version used to install
+- use versions of packages defined in package-lock.json (Do not change or issues may occur)
 
 ## Development
 
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
+- WebPack --used to transpile all of service code
+- Nodemon --runs services code on server
 
