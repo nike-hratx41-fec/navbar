@@ -10,7 +10,7 @@ module.exports = {
       key: '~/.ssh/FECServerKey.pem',
       ref: 'origin/master',
       repo: 'https://github.com/nike-hratx41-fec/navbar.git',
-      path: '/home/ubuntu/navbar',
+      path: '/home/ubuntu',
       'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
     }
   }

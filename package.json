@@ -10,15 +10,8 @@
     "pack": "webpack -d --watch",
     "server": "nodemon server/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mdelong42/navbar.git"
-  },
   "author": "Matt DeLong",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mdelong42/navbar/issues"
-  },
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
