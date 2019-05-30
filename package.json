@@ -5,6 +5,8 @@
   "main": "webpack.config.js",
   "homepage": "https://github.com/mdelong42/navbar#readme",
   "scripts": {
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production",
     "pack": "webpack -d --watch",
     "server": "nodemon server/index.js"
   },
