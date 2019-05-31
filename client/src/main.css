@@ -23,6 +23,7 @@ body {
 
 .cart {
   max-width: 18px !important;
+  max-height: 18px !important;
   margin: 10px !important;
   padding: auto !important;
   transform: rotateY(180deg) !important;
