@@ -75,7 +75,7 @@ body {
 }
 
 #search input[type="text"] {
-  background-image: url(./searchIcon.png);
+  background-image: url("http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/fc51889042f9381f8230686580d53d95.png");
   background-repeat: no-repeat;
   background-position: 15px;
   background-size: 17px 17px;
