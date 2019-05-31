@@ -4,6 +4,7 @@ import "./main.css";
 import nikeSwoosh from './swoosh.png';
 import searchIcon from './searchIcon.png';
 import usFlag from './flag.png';
+import cart from './cart.png';
 
 class Navbar extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class Navbar extends Component {
 
   render () {
     return (
-      <div>
+      <div id="mainContain">
         <div className="firstBar">
           <div className="brand">NikePlus</div>
           <div className="brand">Jordan</div>
@@ -23,7 +24,7 @@ class Navbar extends Component {
           <div className="brand1">Converse</div>
           <div className="userLink">Join/Log In To NikePlus</div>
           <div className="userLink">Help</div>
-          <div className="userLink">Crt</div>
+          <img className="cart" src={"http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/186266c7bbf10d0a2a25bb3e1fd444f5.png"}></img>
           <img className="flag" src={"http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/ee737f621fec479e4d11b83d1187465b.png"}></img>
         </div>
         <div className="secondBar">

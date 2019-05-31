@@ -3,6 +3,12 @@ body {
   margin: 0;
 }
 
+#mainContain {
+  position: sticky;
+  top: 0px;
+  margin: 0;
+}
+
 .swoosh {
   max-width: 70px; 
   max-height: 70px;
@@ -10,9 +16,18 @@ body {
 }
 
 .flag {
-  max-width: 70px; 
-  max-height: 70px;
+  max-width: 50px; 
+  max-height: 30px;
   padding: 10px;
+  padding-right: 15px;
+}
+
+.cart {
+  max-width: 18px; 
+  max-height: 50px;
+  padding: 10px;
+  transform: rotateY(180deg);
+  filter: grayscale(100);
 }
 
 .firstBar {
@@ -20,25 +35,42 @@ body {
   border-bottom: 1px solid #e4e4e4;
   display: flex;
   flex-direction: row;
+  background-color: white;
+  align-items: center;
+  text-align: center;
 }
 
 .brand {
   border-right: 1px solid #e4e4e4;
   padding: 10px;
-  color: green;
+  color: #8d8d8d;
+}
+
+.brand:hover {
+  color: black;
 }
 
 .brand1 {
   border-right: 1px solid #e4e4e4;
   padding: 10px;
-  color: green;
+  color: #8d8d8d;
   margin-right: auto;
 }
 
+.brand1:hover {
+  color: black;
+}
+
 .userLink {
-  border-right: 1px solid #e4e4e4;
   padding: 10px;
-  color: green;
+  color: #8d8d8d;
+}
+
+.userLink:hover {
+  padding-bottom: 8.5px;
+  border-top: 1.5px solid white;
+  border-bottom: 1.5px solid black;
+  color: black;
 }
 
 .secondBar {
@@ -46,32 +78,34 @@ body {
   border-bottom: 1px solid #e4e4e4;
   display: flex;
   flex-direction: row;
-  background-color: aqua;
+  background-color: white;
   align-items: center;
   text-align: center;
 }
 
+.nikeLogo {
+  padding: 10px;
+}
+
 .storeLink0 {
-  align-items: center;
   margin-left: auto;
-  border: 1px solid black;
   padding: 10px;
 }
 
 .storeLink1, .storeLink2, .storeLink3 {
-  border: 1px solid black;
   padding: 10px;
 }
 
 .storeLink4 {
-  align-items: center;
   margin-right: auto;
-  border: 1px solid black;
   padding: 10px;
 }
 
-.nikeLogo {
-  padding: 10px;
+.storeLink0:hover, .storeLink1:hover, .storeLink2:hover, .storeLink3:hover, .storeLink4:hover {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1.5px solid white;
+  border-bottom: 1.5px solid black;
 }
 
 #search input[type="text"] {
