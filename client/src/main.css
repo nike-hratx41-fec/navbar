@@ -26,6 +26,7 @@ body {
   max-width: 18px !important; 
   max-height: 50px !important;
   margin: 10px !important;
+  padding: auto !important;
   transform: rotateY(180deg) !important;
   filter: grayscale(100) !important;
 }
