@@ -40,6 +40,7 @@ class Navbar extends Component {
           </div>
           <div className="filler"></div>
         </div>
+        <h1 className="elegantshadow">luv ya eddy</h1>
       </div>
     )
   }
