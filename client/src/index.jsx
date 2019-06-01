@@ -18,7 +18,7 @@ class Navbar extends Component {
     window.addEventListener(
       "onCartClick",
       event => {
-        alert(event.detail);
+        alert("navbar recieved the goods", event.detail);
       },
       false
     );
