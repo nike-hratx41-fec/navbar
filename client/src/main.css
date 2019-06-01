@@ -6,13 +6,13 @@ body {
 * {
   font-family: Helvetica Neue, Helvetica !important;
   letter-spacing: .5px !important;
-  z-index: 9999;
 }
 
 #mainContain {
   position: sticky !important;
   top: 0px !important;
   margin: 0 !important;
+  z-index: 9999;
 }
 
 .swoosh {
