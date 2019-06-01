@@ -178,11 +178,11 @@ li {
   background-position: 15px !important;
   background-size: 17px 17px !important;
   border: 1px solid #cbcbcb !important;
-  font: bold 12px Arial,Helvetica,Sans-serif !important;
+  font: 12px !important;
   color: #777 !important;
   height: 23px !important;
-  width: 150px !important;
-  padding: 8px 0px 8px 50px !important;
+  width: 200px !important;
+  padding: 5px 0px 5px 50px !important;
   -webkit-border-radius: 2px !important;
   -moz-border-radius: 2px !important;
   border-radius: 2px !important;
@@ -202,5 +202,5 @@ li {
 }
 
 .filler {
-  padding-right: 18px !important;
+  padding-right: 20px !important;
 }
