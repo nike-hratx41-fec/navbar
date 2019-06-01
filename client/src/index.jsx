@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import "./main.css";
+import axios from 'axios';
 import nikeSwoosh from './swoosh.png';
 import searchIcon from './searchIcon.png';
 import usFlag from './flag.png';
@@ -51,6 +52,12 @@ class Navbar extends Component {
 
   handleInput(event) {
     console.log(event.target.value);
+    //http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com
+    axios.get(`/search/${event.target.value}`)
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(err => console.log('err in client', err));
   }
 
   //in future if adding axios requests you have to use your amazon aws url!!!

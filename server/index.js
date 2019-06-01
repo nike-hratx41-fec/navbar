@@ -9,8 +9,9 @@ app.use(cors());
 app.use(bodyparser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.get("/search", (req, res) => {
+app.get("/search/:input", (req, res) => {
   // res.header("Access-Control-Allow-Origin");
+  console.log(req.params.input);
   mongo.searchShoes({}, (err, reviews) => {
     if (err) {
       console.log("error inside findall: ", err);
