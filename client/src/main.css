@@ -3,6 +3,11 @@ body {
   margin: 0 !important;
 }
 
+* {
+  font-family: Helvetica Neue, Helvetica !important;
+  letter-spacing: .5px !important;
+}
+
 #mainContain {
   position: sticky !important;
   top: 0px !important;
@@ -38,11 +43,12 @@ body {
   background-color: white !important;
   align-items: center !important;
   text-align: center !important;
+  font-size: 12px !important;
 }
 
 .brand {
   border-right: 1px solid #e4e4e4 !important;
-  padding: 10px !important;
+  padding: 12px !important;
   color: #8d8d8d !important;
 }
 
@@ -52,7 +58,7 @@ body {
 
 .brand1 {
   border-right: 1px solid #e4e4e4 !important;
-  padding: 10px !important;
+  padding: 12px !important;
   color: #8d8d8d !important;
   margin-right: auto !important;
 }
@@ -62,12 +68,11 @@ body {
 }
 
 .userLink {
-  padding: 10px !important;
+  padding: 12px !important;
   color: #8d8d8d !important;
 }
 
 .userLink:hover {
-  padding-bottom: 8.5px !important;
   border-top: 1.5px solid white !important;
   border-bottom: 1.5px solid black !important;
   color: black !important;
@@ -90,6 +95,8 @@ body {
 .storeLink0 {
   margin-left: auto !important;
   padding: 10px !important;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
 }
 
 .storeLink1, .storeLink2, .storeLink3 {
@@ -106,6 +113,60 @@ body {
   padding-bottom: 24px !important;
   border-top: 1.5px solid white !important;
   border-bottom: 1.5px solid black !important;
+  cursor: pointer !important;
+}
+
+.release-dropdown {
+  display: none;
+  z-index: 101 !important;
+  justify-content: center !important;
+  flex-direction: row !important;
+  border-bottom: 1px solid #e4e4e4 !important;
+}
+
+.release-holder {
+  display: flex; /*no important ??!!!!!*/
+  flex-direction: row !important;
+  padding: 30px !important;
+  letter-spacing: .5px !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  line-height: 38px !important;
+}
+
+.dropContainMain0 {
+  border-right: 1px solid #e4e4e4 !important;
+}
+
+.dropContainMain0, .dropContainMain1, .dropContainMain2, .dropContainMain3 {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.dropContainMain3 {
+  border-left: 1px solid #e4e4e4 !important;
+}
+
+.dropList {
+  list-style: none !important;
+  padding: 0px !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  line-height: 25px !important;
+}
+
+.release-dropdown:hover {
+  display: flex !important;
+}
+
+li {
+  cursor: pointer !important;
+}
+
+.cursorChange {
+  cursor: pointer !important;
 }
 
 #search input[type="text"] {
@@ -122,10 +183,6 @@ body {
   -webkit-border-radius: 2px !important;
   -moz-border-radius: 2px !important;
   border-radius: 2px !important;
-  /* text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset; */
   float: right !important;
   -webkit-transition: all 0.25s ease 0s !important;
   -moz-transition: all 0.25s ease 0s !important;
