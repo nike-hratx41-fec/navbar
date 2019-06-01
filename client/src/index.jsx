@@ -26,7 +26,7 @@ class Navbar extends Component {
 
   handleEnter(event) {
     if(event.target.className === 'storeLink0') {
-      document.querySelector('.release-dropdown').setAttribute('style', 'display: flex;');
+      document.querySelector('.release-dropdown').setAttribute('style', 'display: flex; position: sticky;');
     }
   }
 
@@ -36,7 +36,7 @@ class Navbar extends Component {
 
   handleStay() {
     document.querySelector('.storeLink0').setAttribute('style', 'padding-top: 24px; padding-bottom: 24px; border-top: 1.5px solid white; border-bottom: 1.5px solid black;');
-    document.querySelector('.release-dropdown').setAttribute('style', 'display: flex;');
+    document.querySelector('.release-dropdown').setAttribute('style', 'display: flex; position: sticky;');
   }
 
   handleLeave() {
