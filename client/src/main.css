@@ -180,9 +180,9 @@ li {
   border: 1px solid #cbcbcb !important;
   font: 12px !important;
   color: #777 !important;
-  height: 23px !important;
+  height: 40px !important;
   width: 200px !important;
-  padding: 5px 0px 5px 50px !important;
+  padding: 5px 0px 5px 38px !important;
   -webkit-border-radius: 2px !important;
   -moz-border-radius: 2px !important;
   border-radius: 2px !important;
@@ -194,7 +194,7 @@ li {
 }
 
 #search input[type="text"]:focus {
-  width: 194px !important;
+  width: 300px !important;
 }
 
 .searchDiv {
