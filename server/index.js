@@ -10,7 +10,7 @@ app.use(bodyparser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
 app.get("/search", (req, res) => {
-  res.header("Access-Control-Allow-Origin");
+  // res.header("Access-Control-Allow-Origin");
   mongo.findAll({}, (err, reviews) => {
     if (err) {
       console.log("error inside findall: ", err);
