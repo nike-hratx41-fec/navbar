@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.connect(`mongodb+srv://admin:password42@mattmongodb-o9nhb.mongodb.net/fike?retryWrites=true&w=majority`, {useNewUrlParser: true});
-const shoes = require('../../shoe-data-generator/shoeData.json');
+// const shoes = require('../../shoe-data-generator/shoeData.json');
 
 
 
