@@ -14,6 +14,16 @@ class Navbar extends Component {
     }
   }
 
+  componentDidMount() {
+    window.addEventListener(
+      "onCartClick",
+      event => {
+        alert(event.detail);
+      },
+      false
+    );
+  }
+
   handleEnter(event) {
     if(event.target.className === 'storeLink0') {
       document.querySelector('.release-dropdown').setAttribute('style', 'display: flex;');
@@ -33,6 +43,8 @@ class Navbar extends Component {
     document.querySelector('.storeLink0').setAttribute('style', 'padding-top: 24px; padding-bottom: 24px; boarder: none;');
     document.querySelector('.release-dropdown').setAttribute('style', 'display: none;');
   }
+
+  //in future if adding axios requests you have to use your amazon aws url!!!
 
   //adding two class names to element breaks query selector!!!!!!!!!!!!!
 
