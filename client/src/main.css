@@ -195,7 +195,7 @@ li {
 
 #search input[type="text"]:focus {
   width: 245px !important;
-  border: 1px solid #cbcbcb !important;
+  outline: 0;
 }
 
 .searchDiv {
