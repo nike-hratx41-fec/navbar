@@ -2,8 +2,6 @@ const mongoose = require('mongoose');
 mongoose.connect(`mongodb+srv://admin:password42@mattmongodb-o9nhb.mongodb.net/fike?retryWrites=true&w=majority`, {useNewUrlParser: true});
 // const shoes = require('../../shoe-data-generator/shoeData.json');
 
-
-
 let shoeSchema = mongoose.Schema({
   productName: String,
   category: String,
@@ -15,15 +13,11 @@ let shoeSchema = mongoose.Schema({
 
 let Shoes = mongoose.model('Shoes', shoeSchema);
 
-let findAll = (obj, callBack) => {
-  Shoes.find(obj, function(err, docs) {
-    if (err) {
-      console.log("I AM GETTING AN ERROR");
-    } else {
-      console.log("sucess retreiving database stuff");
-      callBack(null, docs);
-    }
-  });
+let searchShoes = (obj, callBack) => {
+  Shoes.find({productName: {$regex: '.*' + 'Nike' + '.*' }})
+    .limit(5)
+    .sort({productName:1})
+    .then((docs) => {callBack(null, docs)});
 };
 
 //for setting up initial database
@@ -42,4 +36,4 @@ let findAll = (obj, callBack) => {
 //uncomment below 
 //save(shoes);
 
-module.exports.findAll = findAll;
+module.exports.searchShoes = searchShoes;

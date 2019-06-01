@@ -11,7 +11,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 
 app.get("/search", (req, res) => {
   // res.header("Access-Control-Allow-Origin");
-  mongo.findAll({}, (err, reviews) => {
+  mongo.searchShoes({}, (err, reviews) => {
     if (err) {
       console.log("error inside findall: ", err);
     } else {

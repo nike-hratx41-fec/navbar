@@ -49,6 +49,10 @@ class Navbar extends Component {
     window.dispatchEvent(productClickEvent);
   }
 
+  handleInput(event) {
+    console.log(event.target.value);
+  }
+
   //in future if adding axios requests you have to use your amazon aws url!!!
 
   //adding two class names to element breaks query selector!!!!!!!!!!!!!
@@ -75,7 +79,7 @@ class Navbar extends Component {
           <div className="storeLink4">CUSTOMIZE</div>
           <div className="searchDiv">
             <form method="get" action="/search" id="search">
-              <input name="q" type="text" size="45" placeholder="Search"></input>
+              <input name="q" type="text" size="45" placeholder="Search" onChange={this.handleInput}></input>
             </form>
           </div>
           <div className="filler"></div>
