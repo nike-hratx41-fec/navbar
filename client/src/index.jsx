@@ -44,6 +44,11 @@ class Navbar extends Component {
     document.querySelector('.release-dropdown').setAttribute('style', 'display: none;');
   }
 
+  handleClick() {
+    const productClickEvent = new CustomEvent('productClickEvent', { detail: { sku: "BQ9044-100" } })
+    window.dispatchEvent(productClickEvent);
+  }
+
   //in future if adding axios requests you have to use your amazon aws url!!!
 
   //adding two class names to element breaks query selector!!!!!!!!!!!!!
@@ -62,7 +67,7 @@ class Navbar extends Component {
           <img className={["flag", "cursorChange"].join(' ')} src={"http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/ee737f621fec479e4d11b83d1187465b.png"}></img>
         </div>
         <div className="secondBar">
-          <img className="swoosh" src={"http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/061ab828bf837d51f854cd9c1a6558da.png"}></img>
+          <img className="swoosh" onClick={this.handleClick} src={"http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/061ab828bf837d51f854cd9c1a6558da.png"}></img>
           <div className="storeLink0" onMouseEnter={this.handleEnter} onMouseLeave={this.handleMainLeave}>NEW RELEASES</div>
           <div className="storeLink1">MEN</div>
           <div className="storeLink2">WOMEN</div>
