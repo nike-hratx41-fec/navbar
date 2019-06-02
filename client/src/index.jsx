@@ -46,7 +46,7 @@ class Navbar extends Component {
   }
 
   handleClick() {
-    const productClickEvent = new CustomEvent('productClickEvent', { detail: { sku: "AQ1203-200" } })
+    const productClickEvent = new CustomEvent('productClickEvent', { detail: { sku: "BV6068-001" } })
     window.dispatchEvent(productClickEvent);
   }
 
