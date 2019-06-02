@@ -46,18 +46,21 @@ class Navbar extends Component {
   }
 
   handleClick() {
-    const productClickEvent = new CustomEvent('productClickEvent', { detail: { sku: "BQ9044-100" } })
+    const productClickEvent = new CustomEvent('productClickEvent', { detail: { sku: "BV5498-008" } })
     window.dispatchEvent(productClickEvent);
   }
 
   handleInput(event) {
-    console.log(event.target.value);
-    //http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com
-    axios.get(`/search/${event.target.value}`)
+    if (event.target.value.length > 2){
+      axios.get(`/search/${event.target.value}`)
       .then(response => {
         console.log(response.data);
       })
       .catch(err => console.log('err in client', err));
+    }
+    
+    //http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com
+    
   }
 
   //in future if adding axios requests you have to use your amazon aws url!!!

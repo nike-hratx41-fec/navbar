@@ -14,7 +14,7 @@ let shoeSchema = mongoose.Schema({
 let Shoes = mongoose.model('Shoes', shoeSchema);
 
 let searchShoes = (obj, callBack) => {
-  Shoes.find({productName: {$regex: '.*' + 'Nike' + '.*' }})
+  Shoes.find({productName: {$regex: '.*' + `${obj}` + '.*' }})
     .limit(5)
     .sort({productName:1})
     .then((docs) => {callBack(null, docs)});
