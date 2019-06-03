@@ -158,6 +158,7 @@ class Navbar extends Component {
   }
 
   handleRemove(e) {
+    console.log(e.target.id)
     const newRemoval = this.state.cart;
     for(var x = 0; x < this.state.cart.length; x++){
       if(this.state.cart[x].sku === e.target.id.sku && this.state.cart[x].size === e.target.id.size && this.state.cart[x].color === e.target.id.color){
