@@ -176,7 +176,7 @@ class Navbar extends Component {
           </div>
           <div className="filler"></div>
         </div>
-        <div id="searchDrop">
+        {/* <div id="searchDrop">
           <div className="searchPreview">
             <div className="searchPrvTitle">TOP SUGGESTIONS
               {this.state.searchResults.length > 0 &&
@@ -219,7 +219,7 @@ class Navbar extends Component {
                 }
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="release-dropdown" onMouseEnter={this.handleStay} onMouseLeave={this.handleLeave}>
           <div className="release-holder">
             <div className="dropContainMain0">
