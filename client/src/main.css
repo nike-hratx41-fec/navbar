@@ -392,6 +392,7 @@ li {
   right: 0;
   width: 20%;
   z-index: 203 !important;
+  margin-right: 18px !important;
   background-color:rgb(247,247,247);
   border: 1px solid #e4e4e4 !important;
   border-left: 2px solid #e4e4e4 !important;
