@@ -162,7 +162,7 @@ class Navbar extends Component {
     const newRemoval = this.state.cart;
     // const style = window.getComputedStyle(document.getElementsByClassName('cartContain')[0]);
     for(var x = 0; x < this.state.cart.length; x++){
-      if(this.state.cart[x].sku === e.target.id && this.state.cart[x].size === e.target.value && this.state.cart[x].color === e.target.data-color){
+      if(this.state.cart[x].sku === e.target.id && this.state.cart[x].size === e.target.value && this.state.cart[x].color === e.target["data-color"]){
         newRemoval.splice(x, 1);
         this.setState({ cart: newRemoval });
         x = this.state.cart.length;
