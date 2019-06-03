@@ -236,6 +236,7 @@ li {
 .searchRes {
   width: 35%;
   background-color:rgb(247,247,247);
+  position: sticky;
 }
 
 .rowContain {
