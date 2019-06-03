@@ -220,6 +220,7 @@ li {
   width: 72.3%;
   height: 88%;
   float: right;
+  position: sticky !important;
 }
 
 .searchPrvTitle {
