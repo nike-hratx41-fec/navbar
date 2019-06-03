@@ -160,8 +160,9 @@ class Navbar extends Component {
   handleRemove(e) {
     alert(e.target.value1, "this is the color");
     const newRemoval = this.state.cart;
+    // const style = window.getComputedStyle(document.getElementsByClassName('cartContain')[0]);
     for(var x = 0; x < this.state.cart.length; x++){
-      if(this.state.cart[x].sku === e.target.id && this.state.cart[x].size === e.target.value && this.state.cart[x].color === e.target.value1){
+      if(this.state.cart[x].sku === e.target.id && this.state.cart[x].size === e.target.value && this.state.cart[x].color === e.target.data-color){
         newRemoval.splice(x, 1);
         this.setState({ cart: newRemoval });
         x = this.state.cart.length;
@@ -222,7 +223,7 @@ class Navbar extends Component {
                     <div id={listItem.sku}>{listItem.size} M</div>
                     <div id={listItem.sku}>${listItem.price}</div>
                   </div>
-                  <img className="redRemove" id={listItem.sku} value={listItem.size} value1={listItem.color} src="http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/b5b22e1fb368e51b84d0c1ffea51a17d.png" onClick={this.handleRemove}></img>
+                  <img className="redRemove" id={listItem.sku} value={listItem.size} data-color={listItem.color} src="http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/b5b22e1fb368e51b84d0c1ffea51a17d.png" onClick={this.handleRemove}></img>
                 </div>
               )
             }
