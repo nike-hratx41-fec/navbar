@@ -223,7 +223,7 @@ class Navbar extends Component {
                     <div id={listItem.sku}>{listItem.size} M</div>
                     <div id={listItem.sku}>${listItem.price}</div>
                   </div>
-                  <img className="redRemove" id={listItem.sku} value={listItem.size + listItem.color} src="http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/b5b22e1fb368e51b84d0c1ffea51a17d.png" onClick={this.handleRemove}></img>
+                  <img className="redRemove" id={listItem.sku} value={`${listItem.size} + ${listItem.color}`} src="http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/b5b22e1fb368e51b84d0c1ffea51a17d.png" onClick={this.handleRemove}></img>
                 </div>
               )
             }
