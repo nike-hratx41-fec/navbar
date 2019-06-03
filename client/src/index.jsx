@@ -35,6 +35,16 @@ class Navbar extends Component {
       },
       false
     );
+    window.onload = function(){
+      document.onclick = function(e){
+        if (e.target.className !== "cartContain" && e.target.className && "itemContain" && e.target.className !== "cartImg" && e.target.className !== "cartItems" && e.target.className !== "cart cursorChange") {
+          document.querySelector('.cartContain').setAttribute('style', 'display: none;');
+        }
+        if (e.target.className !== "searchRes" && e.target.className && "searchPreview" && e.target.className !== "searchPrvTitle" && e.target.className !== "rowContain" && e.target.className !== "searchRow" && e.target.className !== "resDisplay" && e.target.className !== "resRow" && e.target.className !== "searchItem" && e.target.className !== "searchImg" && e.target.className !== "shoeStats" && e.target.className !== "shoeStat" && e.target.className !== "shoeStat1" && e.target.className !== "firstText" && e.target.className !== "secondText") {
+          document.querySelector('#searchDrop').setAttribute('style', 'display: none;');
+        }
+      };
+    };
   }
 
   //for title
@@ -136,14 +146,8 @@ class Navbar extends Component {
   }
 
   handleItemClick(e) {
-    alert(e);
-    if(typeof e == "string") {
-      alert(e);
-    } else {
-      const productClickEvent = new CustomEvent('productClickEvent', { detail: { sku: e.target.id } })
-      alert(e.target.id)
-      window.dispatchEvent(productClickEvent);
-    }
+    const productClickEvent = new CustomEvent('productClickEvent', { detail: { sku: e.target.id } })
+    window.dispatchEvent(productClickEvent);
   }
 
   handleSearchSelect(sku) {
@@ -164,7 +168,7 @@ class Navbar extends Component {
           document.querySelector('#searchDrop').setAttribute('style', 'display: none;');
         }
       };
-   };
+    };
     return (
       <div id="mainContain">
         <div className="firstBar">
