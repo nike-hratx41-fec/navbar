@@ -71,7 +71,7 @@ body {
 }
 
 .userLink {
-  padding: 12px !important;
+  padding: 10px !important;
   color: #8d8d8d !important;
 }
 
@@ -112,7 +112,7 @@ body {
 }
 
 .storeLink0:hover, .storeLink1:hover, .storeLink2:hover, .storeLink3:hover, .storeLink4:hover {
-  padding-top: 24px !important;
+  padding-top: 24.5px !important;
   padding-bottom: 24px !important;
   border-top: 1px solid #e4e4e4 !important;
   border-bottom: 1.5px solid black !important;
