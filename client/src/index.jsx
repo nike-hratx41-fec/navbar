@@ -157,9 +157,6 @@ class Navbar extends Component {
   render () {
     window.onload = function(){
       document.onclick = function(e){
-        console.log(e.target.id)
-        // const cartStyle = window.getComputedStyle(document.getElementsByClassName('cartContain')[0])
-         console.log(e.target.className);
         if (e.target.className !== "cartContain" && e.target.className && "itemContain" && e.target.className !== "cartImg" && e.target.className !== "cartItems" && e.target.className !== "cart cursorChange") {
           document.querySelector('.cartContain').setAttribute('style', 'display: none;');
         }

@@ -429,3 +429,8 @@ li {
   height: 1200px;
   position: relative;
 }
+
+.redRemove {
+  height: 20px;
+  width: 15px;
+}
