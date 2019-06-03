@@ -46,6 +46,11 @@ class Navbar extends Component {
         }
       };
     };
+    window.addEventListener('scroll', function(e) {
+      if(window.scrollY == 0){
+        window.scrollTo(0,1);
+      }
+    });
   }
 
   //for title
@@ -177,6 +182,11 @@ class Navbar extends Component {
         }
       };
     };
+    window.addEventListener('scroll', function(e) {
+      if(window.scrollY == 0){
+        window.scrollTo(0,1);
+      }
+    });
     return (
       <div id="mainContain">
         <div className="firstBar">
