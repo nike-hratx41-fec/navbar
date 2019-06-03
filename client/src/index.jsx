@@ -150,10 +150,6 @@ class Navbar extends Component {
     window.dispatchEvent(productClickEvent);
   }
 
-  handleSearchSelect(sku) {
-    alert(sku);
-  }
-
   //in future if adding axios requests you have to use your amazon aws url!!!
 
   //adding two class names to element breaks query selector!!!!!!!!!!!!!
