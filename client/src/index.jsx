@@ -65,19 +65,19 @@ class Navbar extends Component {
   handleStay(event) {
     console.log(event.target.className)
     if(event.target.className === 'release-holder') {
-      document.querySelector('.storeLink0').setAttribute('style', 'padding-top: 24.5px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
+      document.querySelector('.storeLink0').setAttribute('style', 'padding-top: 25px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
       document.querySelector('.release-dropdown').setAttribute('style', 'display: flex; position: sticky;');
     } else if(event.target.className === 'release-holder1') {
-      document.querySelector('.storeLink1').setAttribute('style', 'padding-top: 24.5px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
+      document.querySelector('.storeLink1').setAttribute('style', 'padding-top: 25px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
       document.querySelector('.release-dropdown1').setAttribute('style', 'display: flex; position: sticky;');
     } else if(event.target.className === 'release-holder2') {
-      document.querySelector('.storeLink2').setAttribute('style', 'padding-top: 24.5px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
+      document.querySelector('.storeLink2').setAttribute('style', 'padding-top: 25px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
       document.querySelector('.release-dropdown2').setAttribute('style', 'display: flex; position: sticky;');
     } else if(event.target.className === 'release-holder3') {
-      document.querySelector('.storeLink3').setAttribute('style', 'padding-top: 24.5px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
+      document.querySelector('.storeLink3').setAttribute('style', 'padding-top: 25px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
       document.querySelector('.release-dropdown3').setAttribute('style', 'display: flex; position: sticky;');
     } else if(event.target.className === 'release-holder4') {
-      document.querySelector('.storeLink4').setAttribute('style', 'padding-top: 24.5px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
+      document.querySelector('.storeLink4').setAttribute('style', 'padding-top: 25px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
       document.querySelector('.release-dropdown4').setAttribute('style', 'display: flex; position: sticky;');
     }
   }
