@@ -158,7 +158,7 @@ class Navbar extends Component {
   }
 
   handleRemove(e) {
-    alert(e.target.value1, "this is the color");
+    alert(e.target.color, "this is the color");
     const newRemoval = this.state.cart;
     // const style = window.getComputedStyle(document.getElementsByClassName('cartContain')[0]);
     for(var x = 0; x < this.state.cart.length; x++){
