@@ -309,7 +309,7 @@ li {
 .cartContain {
   display: none;
   flex-direction: column;
-  position: absolute;
+  position: sticky;
   top: 42px;
   right: 0;
   width: 20%;
