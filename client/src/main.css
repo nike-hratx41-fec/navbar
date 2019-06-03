@@ -210,7 +210,7 @@ li {
   width: 100%;
   height: 84.49vh;
   text-align: center;
-  position: sticky;
+  position: sticky !important;
 }
 
 .searchPreview {
@@ -236,7 +236,7 @@ li {
 .searchRes {
   width: 35%;
   background-color:rgb(247,247,247);
-  position: sticky;
+  position: sticky !important;
 }
 
 .rowContain {
@@ -310,7 +310,7 @@ li {
 .cartContain {
   display: none;
   flex-direction: column;
-  position: sticky;
+  position:  !important;
   top: 42px;
   right: 0;
   width: 20%;

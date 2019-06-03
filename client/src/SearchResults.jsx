@@ -7,7 +7,6 @@ class SearchResult extends Component {
   }
 
   handleClick(e) {
-    alert(e.target.id)
     const productClickEvent = new CustomEvent('productClickEvent', { detail: { sku: e.target.id } })
     window.dispatchEvent(productClickEvent);
   }
