@@ -23,7 +23,7 @@ class Navbar extends Component {
     window.addEventListener(
       "onCartClick",
       event => {
-        axios.get(`/nameIMG/${event.detail.sku}`)
+        axios.get(`http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/nameIMG/${event.detail.sku}`)
           .then(response => {
             response.data.color = event.detail.color;
             response.data.size = event.detail.size;
@@ -60,7 +60,7 @@ class Navbar extends Component {
 
   handleInput(event) {
     if (event.target.value.length > 2){
-      axios.get(`/search/${event.target.value}`)
+      axios.get(`http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/search/${event.target.value}`)
       .then(response => {
         this.setState({ searchResults: response.data });
         console.log(this.state.searchResults[0].productName)
