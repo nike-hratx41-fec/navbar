@@ -103,7 +103,6 @@ class Navbar extends Component {
       axios.get(`http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/search/${event.target.value}`)
       .then(response => {
         this.setState({ searchResults: response.data });
-        console.log(this.state.searchResults[0].productName)
       })
       .then(document.querySelector('#searchDrop').setAttribute('style', 'display: block; position: sticky;'))
       .catch(err => console.log('err in client', err));
@@ -196,6 +195,7 @@ class Navbar extends Component {
                     <div id={listItem.sku} onClick={this.handleItemClick}>{listItem.size} M</div>
                     <div id={listItem.sku} onClick={this.handleItemClick}>${listItem.price}</div>
                   </div>
+                  <div>remove</div>
                 </div>
               )
             }

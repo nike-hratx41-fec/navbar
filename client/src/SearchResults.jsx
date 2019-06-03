@@ -9,6 +9,7 @@ class SearchResult extends Component {
   handleClick(e) {
     const productClickEvent = new CustomEvent('productClickEvent', { detail: { sku: e.target.id } })
     window.dispatchEvent(productClickEvent);
+    document.querySelector('#searchDrop').setAttribute('style', 'display: none;');
   }
 
   render() {
