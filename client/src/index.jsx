@@ -161,7 +161,7 @@ class Navbar extends Component {
     console.log(e.target.id, "this is the color");
     const newRemoval = this.state.cart;
     for(var x = 0; x < this.state.cart.length; x++){
-      if(this.state.cart[x].sku === e.target.id.sku && this.state.cart[x].size === e.target.id.size && this.state.cart[x].color === e.target.id.color){
+      if(this.state.cart[x].sku === e.target.id && this.state.cart[x].size === e.target.value && this.state.cart[x].color === e.target.value1){
         newRemoval.splice(x, 1);
         this.setState({ cart: newRemoval });
         x = this.state.cart.length;
@@ -222,7 +222,7 @@ class Navbar extends Component {
                     <div id={listItem.sku}>{listItem.size} M</div>
                     <div id={listItem.sku}>${listItem.price}</div>
                   </div>
-                  <img className="redRemove" id={`${listItem}`} src="http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/b5b22e1fb368e51b84d0c1ffea51a17d.png" onClick={this.handleRemove}></img>
+                  <img className="redRemove" id={listItem.sku} value={listItem.size} value1={listItem.color} src="http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/b5b22e1fb368e51b84d0c1ffea51a17d.png" onClick={this.handleRemove}></img>
                 </div>
               )
             }
