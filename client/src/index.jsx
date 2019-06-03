@@ -196,7 +196,7 @@ class Navbar extends Component {
                 </div>
               }
             </div>
-            <div className="searchRes">
+            {/* <div className="searchRes">
                 {this.state.searchResults.length > 0 &&
                   <div className="resDisplay">
                     <div className="resRow">
@@ -217,7 +217,7 @@ class Navbar extends Component {
                     </div>
                   </div>
                 }
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="release-dropdown" onMouseEnter={this.handleStay} onMouseLeave={this.handleLeave}>
