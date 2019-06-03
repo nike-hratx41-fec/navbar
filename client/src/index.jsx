@@ -7,6 +7,7 @@ import nikeSwoosh from './swoosh.png';
 import searchIcon from './searchIcon.png';
 import usFlag from './flag.png';
 import cart from './cart.png';
+import redX from './redX.png';
 
 class Navbar extends Component {
   constructor(props) {
@@ -190,12 +191,12 @@ class Navbar extends Component {
                 <div className="itemContain" id={listItem.sku} onClick={this.handleItemClick}>
                   <img className="cartImg" id={listItem.sku} onClick={this.handleItemClick} src={listItem.images[0]}></img>
                   <div className="cartItems" id={listItem.sku}>
-                    <div id={listItem.sku} onClick={this.handleItemClick}>{listItem.productName}</div>
-                    <div id={listItem.sku} onClick={this.handleItemClick}>{listItem.color}</div>
-                    <div id={listItem.sku} onClick={this.handleItemClick}>{listItem.size} M</div>
-                    <div id={listItem.sku} onClick={this.handleItemClick}>${listItem.price}</div>
+                    <div id={listItem.sku}>{listItem.productName}</div>
+                    <div id={listItem.sku}>{listItem.color}</div>
+                    <div id={listItem.sku}>{listItem.size} M</div>
+                    <div id={listItem.sku}>${listItem.price}</div>
                   </div>
-                  <div>remove</div>
+                  <img className="redRemove" src="http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/b5b22e1fb368e51b84d0c1ffea51a17d.png"></img>
                 </div>
               )
             }
