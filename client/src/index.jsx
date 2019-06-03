@@ -45,6 +45,7 @@ class Navbar extends Component {
           document.querySelector('#searchDrop').setAttribute('style', 'display: none;');
         }
       };
+      window.scrollTo(0,1);
     };
     window.addEventListener('scroll', function(e) {
       if(window.scrollY == 0){
