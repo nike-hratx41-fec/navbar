@@ -65,7 +65,7 @@ class Navbar extends Component {
         this.setState({ searchResults: response.data });
         console.log(this.state.searchResults[0].productName)
       })
-      .then(document.querySelector('#searchDrop').setAttribute('style', 'display: block;'))
+      .then(document.querySelector('#searchDrop').setAttribute('style', 'display: flex; position: sticky;'))
       .catch(err => console.log('err in client', err));
     } else {
       document.querySelector('#searchDrop').setAttribute('style', 'display: none;');
@@ -77,7 +77,7 @@ class Navbar extends Component {
   handleFocus(e) {
     console.log("leave")
     if (e.target.value.length > 2){
-      document.querySelector('#searchDrop').setAttribute('style', 'display: flex;');
+      document.querySelector('#searchDrop').setAttribute('style', 'display: flex; position: sticky;');
     }
   }
 
