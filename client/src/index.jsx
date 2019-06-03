@@ -144,6 +144,7 @@ class Navbar extends Component {
   // }
 
   handleCart() {
+    document.querySelector('.cartCount').setAttribute('style', 'display: block;');
     const style = window.getComputedStyle(document.getElementsByClassName('cartContain')[0]);
     if (style.display == "block") {
       document.querySelector('.cartContain').setAttribute('style', 'display: none;');
@@ -198,6 +199,11 @@ class Navbar extends Component {
           <div className={["userLink", "cursorChange"].join(' ')}>Join/Log In To NikePlus Account</div>
           <div className={["userLink", "cursorChange"].join(' ')}>Help</div>
           <img className={["cart", "cursorChange"].join(' ')} src={"http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/186266c7bbf10d0a2a25bb3e1fd444f5.png"} onClick={this.handleCart}></img>
+          {this.state.cart.length > 0 && 
+            <div className="cartCount">
+              {this.state.cart.length}
+            </div>
+          }
           <div className="cartContain">
             <div>Your Cart</div>
             {this.state.cart.length == 0 &&

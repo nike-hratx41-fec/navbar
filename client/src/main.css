@@ -435,3 +435,12 @@ li {
   width: 15px;
   margin: auto;
 }
+
+.cartCount {
+  display: none;
+  position: absolute !important;
+  right: 55px;
+  top: 20px;
+  color:red;
+  background-color: #8d8d8d;
+}
