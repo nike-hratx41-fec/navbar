@@ -261,6 +261,7 @@ li {
   width: 100%;
   display: flex;
   flex-direction: row;
+  position: sticky !important;
 }
 
 .shoeStats {
