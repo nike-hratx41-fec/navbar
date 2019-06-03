@@ -17,6 +17,7 @@ class Navbar extends Component {
       cart: []
     }
 
+    this.handleRemove = this.handleRemove.bind(this);
     this.handleInput = this.handleInput.bind(this);
   }
 
@@ -150,6 +151,16 @@ class Navbar extends Component {
     window.dispatchEvent(productClickEvent);
   }
 
+  handleRemove(e) {
+    const newRemoval = this.state.cart;
+    for(var x =0; x < this.state.cart.length; x++){
+      if(this.state.cart[x].sku == e.target.id){
+        newRemoval.splice(x, 1);
+        this.setState({ cart: newRemoval });
+      }
+    }
+  }
+
   //in future if adding axios requests you have to use your amazon aws url!!!
 
   //adding two class names to element breaks query selector!!!!!!!!!!!!!
@@ -193,7 +204,7 @@ class Navbar extends Component {
                     <div id={listItem.sku}>{listItem.size} M</div>
                     <div id={listItem.sku}>${listItem.price}</div>
                   </div>
-                  <img className="redRemove" src="http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/b5b22e1fb368e51b84d0c1ffea51a17d.png"></img>
+                  <img className="redRemove" id={listItem.sku} src="http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/b5b22e1fb368e51b84d0c1ffea51a17d.png" onClick={this.handleRemove}></img>
                 </div>
               )
             }
