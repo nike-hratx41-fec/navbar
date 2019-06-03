@@ -36,24 +36,64 @@ class Navbar extends Component {
     );
   }
 
+  //for title
   handleEnter(event) {
     if(event.target.className === 'storeLink0') {
       document.querySelector('.release-dropdown').setAttribute('style', 'display: flex; position: sticky;');
+    } else if(event.target.className === 'storeLink1') {
+      document.querySelector('.release-dropdown1').setAttribute('style', 'display: flex; position: sticky;');
+    } else if(event.target.className === 'storeLink2') {
+      document.querySelector('.release-dropdown2').setAttribute('style', 'display: flex; position: sticky;');
+    } else if(event.target.className === 'storeLink3') {
+      document.querySelector('.release-dropdown3').setAttribute('style', 'display: flex; position: sticky;');
+    } else if(event.target.className === 'storeLink4') {
+      document.querySelector('.release-dropdown4').setAttribute('style', 'display: flex; position: sticky;');
     }
   }
 
+  //for titlle
   handleMainLeave(){
+    console.log('left title')
     document.querySelector('.release-dropdown').setAttribute('style', 'display: none;');
+    document.querySelector('.release-dropdown1').setAttribute('style', 'display: none;');
+    document.querySelector('.release-dropdown2').setAttribute('style', 'display: none;');
+    document.querySelector('.release-dropdown3').setAttribute('style', 'display: none;');
+    document.querySelector('.release-dropdown4').setAttribute('style', 'display: none;');
   }
 
-  handleStay() {
-    document.querySelector('.storeLink0').setAttribute('style', 'padding-top: 24px; padding-bottom: 24px; border-top: 1.5px solid white; border-bottom: 1.5px solid black;');
-    document.querySelector('.release-dropdown').setAttribute('style', 'display: flex; position: sticky;');
+  //for menu
+  handleStay(event) {
+    console.log(event.target.className)
+    if(event.target.className === 'release-holder') {
+      document.querySelector('.storeLink0').setAttribute('style', 'padding-top: 24.5px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
+      document.querySelector('.release-dropdown').setAttribute('style', 'display: flex; position: sticky;');
+    } else if(event.target.className === 'release-holder1') {
+      document.querySelector('.storeLink1').setAttribute('style', 'padding-top: 24.5px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
+      document.querySelector('.release-dropdown1').setAttribute('style', 'display: flex; position: sticky;');
+    } else if(event.target.className === 'release-holder2') {
+      document.querySelector('.storeLink2').setAttribute('style', 'padding-top: 24.5px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
+      document.querySelector('.release-dropdown2').setAttribute('style', 'display: flex; position: sticky;');
+    } else if(event.target.className === 'release-holder3') {
+      document.querySelector('.storeLink3').setAttribute('style', 'padding-top: 24.5px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
+      document.querySelector('.release-dropdown3').setAttribute('style', 'display: flex; position: sticky;');
+    } else if(event.target.className === 'release-holder4') {
+      document.querySelector('.storeLink4').setAttribute('style', 'padding-top: 24.5px; padding-bottom: 24px; border-top: 1px solid #e4e4e4; border-bottom: 1.5px solid black;');
+      document.querySelector('.release-dropdown4').setAttribute('style', 'display: flex; position: sticky;');
+    }
   }
 
+  //for menu
   handleLeave() {
     document.querySelector('.storeLink0').setAttribute('style', 'padding-top: 24px; padding-bottom: 24px; boarder: none;');
+    document.querySelector('.storeLink1').setAttribute('style', 'padding-top: 24px; padding-bottom: 24px; boarder: none;');
+    document.querySelector('.storeLink2').setAttribute('style', 'padding-top: 24px; padding-bottom: 24px; boarder: none;');
+    document.querySelector('.storeLink3').setAttribute('style', 'padding-top: 24px; padding-bottom: 24px; boarder: none;');
+    document.querySelector('.storeLink4').setAttribute('style', 'padding-top: 24px; padding-bottom: 24px; boarder: none;');
     document.querySelector('.release-dropdown').setAttribute('style', 'display: none;');
+    document.querySelector('.release-dropdown1').setAttribute('style', 'display: none;');
+    document.querySelector('.release-dropdown2').setAttribute('style', 'display: none;');
+    document.querySelector('.release-dropdown3').setAttribute('style', 'display: none;');
+    document.querySelector('.release-dropdown4').setAttribute('style', 'display: none;');
   }
 
   // 
@@ -65,7 +105,7 @@ class Navbar extends Component {
         this.setState({ searchResults: response.data });
         console.log(this.state.searchResults[0].productName)
       })
-      .then(document.querySelector('#searchDrop').setAttribute('style', 'display: flex; position: sticky;'))
+      .then(document.querySelector('#searchDrop').setAttribute('style', 'display: block; position: sticky;'))
       .catch(err => console.log('err in client', err));
     } else {
       document.querySelector('#searchDrop').setAttribute('style', 'display: none;');
@@ -77,7 +117,7 @@ class Navbar extends Component {
   handleFocus(e) {
     console.log("leave")
     if (e.target.value.length > 2){
-      document.querySelector('#searchDrop').setAttribute('style', 'display: flex; position: sticky;');
+      document.querySelector('#searchDrop').setAttribute('style', 'display: block; position: sticky;');
     }
   }
 
@@ -165,10 +205,10 @@ class Navbar extends Component {
         <div className="secondBar">
           <img className="swoosh" onClick={this.handleClick} src={"http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/061ab828bf837d51f854cd9c1a6558da.png"}></img>
           <div className="storeLink0" onMouseEnter={this.handleEnter} onMouseLeave={this.handleMainLeave}>NEW RELEASES</div>
-          <div className="storeLink1">MEN</div>
-          <div className="storeLink2">WOMEN</div>
-          <div className="storeLink3">KIDS</div>
-          <div className="storeLink4">CUSTOMIZE</div>
+          <div className="storeLink1" onMouseEnter={this.handleEnter} onMouseLeave={this.handleMainLeave}>MEN</div>
+          <div className="storeLink2" onMouseEnter={this.handleEnter} onMouseLeave={this.handleMainLeave}>WOMEN</div>
+          <div className="storeLink3" onMouseEnter={this.handleEnter} onMouseLeave={this.handleMainLeave}>KIDS</div>
+          <div className="storeLink4" onMouseEnter={this.handleEnter} onMouseLeave={this.handleMainLeave}>CUSTOMIZE</div>
           <div className="searchDiv">
             <form id="search">
               <input className="searchInput" type="text" size="45" placeholder="Search" onChange={this.handleInput} onBlur={this.handleFocus1} onFocus={this.handleFocus}></input>
@@ -225,6 +265,158 @@ class Navbar extends Component {
             <div className="dropContainMain0">
               <div className="cursorChange">SNKRS LAUNCH CALENDAR</div>
               <div className="cursorChange">JUST IN</div>
+              <div className="cursorChange">NEW TO SALE</div>
+              <div className="cursorChange">SHOP ALL NEW ARRIVALS</div>
+            </div>
+            <div className="dropContainMain1">
+              <div className="cursorChange">NEW FOR MEN</div>
+              <ul className="dropList">
+                <li>Shoes</li>
+                <li>Clothing</li>
+                <li>Equipment</li>
+                <li>Shop All New</li>
+              </ul>
+            </div>
+            <div className="dropContainMain2">
+              <div className="cursorChange">NEW FOR WOMEN</div>
+              <ul className="dropList">
+                <li>Shoes</li>
+                <li>Clothing</li>
+                <li>Equipment</li>
+                <li>Shop All New</li>
+              </ul>
+            </div>
+            <div className="dropContainMain3">
+              <div className="cursorChange">NEW FOR KIDS</div>
+              <ul className="dropList">
+                <li>Boys Shoes</li>
+                <li>Boys Clothing</li>
+                <li>Girls Shoes</li>
+                <li>Girls Clothing</li>
+                <li>Shop All New</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="release-dropdown1" onMouseEnter={this.handleStay} onMouseLeave={this.handleLeave}>
+          <div className="release-holder1">
+            <div className="dropContainMain0">
+              <div className="cursorChange">ITS DIFFERENT!!</div>
+              <div className="cursorChange">JUST IN</div>
+              <div className="cursorChange">NEW TO SALE</div>
+              <div className="cursorChange">SHOP ALL NEW ARRIVALS</div>
+            </div>
+            <div className="dropContainMain1">
+              <div className="cursorChange">NEW FOR MEN</div>
+              <ul className="dropList">
+                <li>Shoes</li>
+                <li>Clothing</li>
+                <li>Equipment</li>
+                <li>Shop All New</li>
+              </ul>
+            </div>
+            <div className="dropContainMain2">
+              <div className="cursorChange">NEW FOR WOMEN</div>
+              <ul className="dropList">
+                <li>Shoes</li>
+                <li>Clothing</li>
+                <li>Equipment</li>
+                <li>Shop All New</li>
+              </ul>
+            </div>
+            <div className="dropContainMain3">
+              <div className="cursorChange">NEW FOR KIDS</div>
+              <ul className="dropList">
+                <li>Boys Shoes</li>
+                <li>Boys Clothing</li>
+                <li>Girls Shoes</li>
+                <li>Girls Clothing</li>
+                <li>Shop All New</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="release-dropdown2" onMouseEnter={this.handleStay} onMouseLeave={this.handleLeave}>
+          <div className="release-holder2">
+            <div className="dropContainMain0">
+              <div className="cursorChange">SNKRS LAUNCH CALENDAR</div>
+              <div className="cursorChange">JUST IN</div>
+              <div className="cursorChange">NEW TO SALE</div>
+              <div className="cursorChange">EVEN MORE DIFFERENT!!</div>
+            </div>
+            <div className="dropContainMain1">
+              <div className="cursorChange">NEW FOR MEN</div>
+              <ul className="dropList">
+                <li>Shoes</li>
+                <li>Clothing</li>
+                <li>Equipment</li>
+                <li>Shop All New</li>
+              </ul>
+            </div>
+            <div className="dropContainMain2">
+              <div className="cursorChange">NEW FOR WOMEN</div>
+              <ul className="dropList">
+                <li>Shoes</li>
+                <li>Clothing</li>
+                <li>Equipment</li>
+                <li>Shop All New</li>
+              </ul>
+            </div>
+            <div className="dropContainMain3">
+              <div className="cursorChange">NEW FOR KIDS</div>
+              <ul className="dropList">
+                <li>Boys Shoes</li>
+                <li>Boys Clothing</li>
+                <li>Girls Shoes</li>
+                <li>Girls Clothing</li>
+                <li>Shop All New</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="release-dropdown3" onMouseEnter={this.handleStay} onMouseLeave={this.handleLeave}>
+          <div className="release-holder3">
+            <div className="dropContainMain0">
+              <div className="cursorChange">SNKRS LAUNCH CALENDAR</div>
+              <div className="cursorChange">JUST IN</div>
+              <div className="cursorChange">Different</div>
+              <div className="cursorChange">SHOP ALL NEW ARRIVALS</div>
+            </div>
+            <div className="dropContainMain1">
+              <div className="cursorChange">NEW FOR MEN</div>
+              <ul className="dropList">
+                <li>Shoes</li>
+                <li>Clothing</li>
+                <li>Equipment</li>
+                <li>Shop All New</li>
+              </ul>
+            </div>
+            <div className="dropContainMain2">
+              <div className="cursorChange">NEW FOR WOMEN</div>
+              <ul className="dropList">
+                <li>Shoes</li>
+                <li>Clothing</li>
+                <li>Equipment</li>
+                <li>Shop All New</li>
+              </ul>
+            </div>
+            <div className="dropContainMain3">
+              <div className="cursorChange">NEW FOR KIDS</div>
+              <ul className="dropList">
+                <li>Boys Shoes</li>
+                <li>Boys Clothing</li>
+                <li>Girls Shoes</li>
+                <li>Girls Clothing</li>
+                <li>Shop All New</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="release-dropdown4" onMouseEnter={this.handleStay} onMouseLeave={this.handleLeave}>
+          <div className="release-holder4">
+            <div className="dropContainMain0">
+              <div className="cursorChange">SNKRS LAUNCH CALENDAR</div>
+              <div className="cursorChange">STUFFF COMES IN</div>
               <div className="cursorChange">NEW TO SALE</div>
               <div className="cursorChange">SHOP ALL NEW ARRIVALS</div>
             </div>
