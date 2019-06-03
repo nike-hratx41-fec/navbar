@@ -22,6 +22,19 @@ app.get("/search/:input", (req, res) => {
   });
 });
 
+app.get("/nameImg/:input", (req, res) => {
+  // res.header("Access-Control-Allow-Origin");
+  console.log(req.params.input);
+  mongo.searchShoe(req.params.input, (err, reviews) => {
+    if (err) {
+      console.log("error inside findall: ", err);
+    } else {
+      console.log("server side get complete", reviews);
+      res.send(reviews);
+    }
+  });
+});
+
 app.listen(port, function() {
   console.log(`listening on port ${port}`);
 });

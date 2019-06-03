@@ -15,9 +15,15 @@ let Shoes = mongoose.model('Shoes', shoeSchema);
 
 let searchShoes = (obj, callBack) => {
   Shoes.find({productName: {$regex: '.*' + `${obj}` + '.*' }})
-    .limit(5)
+    .limit(6)
     .sort({productName:1})
     .then((docs) => {callBack(null, docs)});
+};
+
+let searchShoe = (obj, callBack) => {
+  Shoes.findOne({ "sku": `${obj}` })
+    .select('images productName price sku')
+    .then((docs) => {callBack(null, docs)})
 };
 
 //for setting up initial database
@@ -37,3 +43,4 @@ let searchShoes = (obj, callBack) => {
 //save(shoes);
 
 module.exports.searchShoes = searchShoes;
+module.exports.searchShoe = searchShoe;
