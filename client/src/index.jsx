@@ -77,7 +77,7 @@ class Navbar extends Component {
   handleFocus(e) {
     console.log("leave")
     if (e.target.value.length > 2){
-      document.querySelector('#searchDrop').setAttribute('style', 'display: block;');
+      document.querySelector('#searchDrop').setAttribute('style', 'display: flex;');
     }
   }
 
