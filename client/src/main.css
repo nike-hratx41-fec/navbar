@@ -437,7 +437,7 @@ li {
 }
 
 .cartCount {
-  display: none;
+  display: block;
   position: absolute !important;
   right: 55px;
   top: 20px;

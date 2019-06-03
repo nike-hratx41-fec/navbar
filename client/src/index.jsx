@@ -144,7 +144,6 @@ class Navbar extends Component {
   // }
 
   handleCart() {
-    document.querySelector('.cartCount').setAttribute('style', 'display: block;');
     const style = window.getComputedStyle(document.getElementsByClassName('cartContain')[0]);
     if (style.display == "block") {
       document.querySelector('.cartContain').setAttribute('style', 'display: none;');
