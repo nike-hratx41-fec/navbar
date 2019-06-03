@@ -159,7 +159,6 @@ class Navbar extends Component {
 
   handleRemove(e) {
     const newRemoval = this.state.cart;
-    // const style = window.getComputedStyle(document.getElementsByClassName('cartContain')[0]);
     for(var x = 0; x < this.state.cart.length; x++){
       if(this.state.cart[x].sku === e.target.id && this.state.cart[x].size === e.target.value){
         newRemoval.splice(x, 1);
