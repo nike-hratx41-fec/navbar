@@ -160,7 +160,7 @@ class Navbar extends Component {
   handleRemove(e) {
     const newRemoval = this.state.cart;
     for(var x = 0; x < this.state.cart.length; x++){
-      if(this.state.cart[x].sku === e.target.id){
+      if(this.state.cart[x].sku === e.target.id && this.state.cart[x].size === e.target.value){
         newRemoval.splice(x, 1);
         this.setState({ cart: newRemoval });
         x = this.state.cart.length;
@@ -221,7 +221,7 @@ class Navbar extends Component {
                     <div id={listItem.sku}>{listItem.size} M</div>
                     <div id={listItem.sku}>${listItem.price}</div>
                   </div>
-                  <img className="redRemove" id={listItem.sku} src="http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/b5b22e1fb368e51b84d0c1ffea51a17d.png" onClick={this.handleRemove}></img>
+                  <img className="redRemove" id={listItem.sku} value={listItem.size} src="http://ec2-18-221-123-158.us-east-2.compute.amazonaws.com/b5b22e1fb368e51b84d0c1ffea51a17d.png" onClick={this.handleRemove}></img>
                 </div>
               )
             }
