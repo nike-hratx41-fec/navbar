@@ -88,10 +88,10 @@ class Navbar extends Component {
 
   handleCart() {
     const style = window.getComputedStyle(document.getElementsByClassName('cartContain')[0]);
-    if (style.display == "flex") {
+    if (style.display == "block") {
       document.querySelector('.cartContain').setAttribute('style', 'display: none;');
     } else {
-      document.querySelector('.cartContain').setAttribute('style', 'display: flex;');
+      document.querySelector('.cartContain').setAttribute('style', 'display: block;');
     }
   }
 
@@ -259,7 +259,6 @@ class Navbar extends Component {
           </div>
         </div>
       </div>
-      //{["dropList", "cursorChange"].join(' ')} for multiple class names
     )
   }
 }
